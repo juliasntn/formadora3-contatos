@@ -98,11 +98,3 @@ export const environment = {
 2. Crie um branch: `git checkout -b feat/minha-alteracao`
 3. Faça alterações e commit: `git commit -am "Descrição"`
 4. Abra um pull request explicando as mudanças
-
-
-## Licença
-MIT — sinta-se livre para usar e adaptar.
-
-
-## Contato
-Se quiser que eu refine o tema (toggle dark mode, ajustes de contraste, animações mais suaves ou PR com as mudanças), me diga quais preferências visuais você quer e eu implemento.
