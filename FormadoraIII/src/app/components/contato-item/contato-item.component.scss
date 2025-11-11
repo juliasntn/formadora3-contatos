@@ -1,0 +1,50 @@
+/* Estilos do componente de item de contato - avatar, título e ações */
+.contact-wrapper {
+	margin-bottom: 14px;
+}
+
+.contact-row {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.avatar {
+	width: 54px;
+	height: 54px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	color: #fff;
+	font-weight: 700;
+	font-size: 16px;
+	background: linear-gradient(135deg, var(--ion-color-primary), var(--ion-color-secondary));
+	box-shadow: 0 6px 18px rgba(44,39,56,0.08);
+}
+
+.contact-info {
+	flex: 1 1 auto;
+}
+
+.contact-name {
+	font-weight: 600;
+	color: var(--ion-color-dark);
+}
+
+.contact-sub {
+	font-size: 0.9rem;
+	color: var(--ion-color-medium);
+}
+
+.contact-actions {
+	display: flex;
+	gap: 8px;
+}
+
+ion-button.contact-action {
+	--border-radius: 10px;
+	--padding-start: 12px;
+	--padding-end: 12px;
+}
+
