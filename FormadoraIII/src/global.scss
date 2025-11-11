@@ -73,7 +73,7 @@ ion-card {
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--app-elevation-2);
   }
 }
 
@@ -141,12 +141,15 @@ html, body, ion-app {
 
 /* Background gradient on the main document; ion-content will be transparent to show this */
 body {
-  background: linear-gradient(180deg, #F7F6FF 0%, #FFFFFF 100%);
+  background: linear-gradient(180deg, #FBFBFE 0%, #FFFFFF 100%);
   color: var(--ion-color-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ion-content {
   --background: transparent;
+  padding: var(--space-md);
 }
 
 /* Buttons and cards adopt new radii and shadows */
@@ -154,6 +157,9 @@ ion-button {
   --border-radius: var(--app-border-radius-md);
   box-shadow: var(--app-elevation-1);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
+  --background: linear-gradient(90deg, var(--ion-color-primary), var(--ion-color-secondary));
+  --color: var(--ion-color-primary-contrast);
+  font-weight: 600;
 }
 
 ion-button:active {
@@ -164,10 +170,64 @@ ion-card {
   border-radius: var(--app-border-radius-lg);
   box-shadow: var(--app-elevation-2);
   overflow: hidden;
+  background: var(--app-surface);
+  border: 1px solid rgba(16,16,24,0.04);
 }
 
 /* Header tweaks to match theme */
 ion-header ion-toolbar {
-  --background: linear-gradient(90deg, rgba(108,92,231,1) 0%, rgba(0,184,148,0.95) 100%);
+  --background: rgba(91,75,216,0.98);
   --color: #fff;
+  backdrop-filter: blur(var(--app-backdrop-blur));
+}
+
+/* Inputs: cleaner, with subtle focus ring */
+ion-input, ion-textarea, ion-select {
+  --background: rgba(255,255,255,0.9);
+  border-radius: var(--app-border-radius-sm);
+  border: 1px solid rgba(16,16,24,0.05);
+  padding: calc(var(--space-xs) + 2px);
+  /* ensure readable text color inside native input */
+  --color: var(--ion-color-dark);
+
+  &::part(native) {
+    color: var(--ion-color-dark);
+  }
+}
+
+ion-item.ghost {
+  background: transparent;
+  --ion-item-background: transparent;
+}
+
+/* Animations */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.98); opacity: 0.0 }
+  60% { transform: scale(1.02); opacity: 1 }
+  100% { transform: scale(1); opacity: 1 }
+}
+
+.animate-in {
+  animation: slideUpFade .42s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.pop-in {
+  animation: pop .36s cubic-bezier(.22,.9,.3,1) both;
+}
+
+.hover-pulse:hover {
+  transform-origin: center;
+  transition: transform .12s ease;
+  transform: translateY(-2px) scale(1.01);
 }

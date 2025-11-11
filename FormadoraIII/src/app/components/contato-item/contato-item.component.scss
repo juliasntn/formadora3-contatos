@@ -1,6 +1,8 @@
 /* Estilos do componente de item de contato - avatar, título e ações */
 .contact-wrapper {
 	margin-bottom: 14px;
+	/* small entrance and hover micro-interactions */
+	animation: slideUpFade .42s cubic-bezier(.2,.8,.2,1) both;
 }
 
 .contact-row {
@@ -14,13 +16,19 @@
 	height: 54px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	box-shadow: var(--app-elevation-1);
+	border: 2px solid rgba(255,255,255,0.06);
 	border-radius: 50%;
 	color: #fff;
 	font-weight: 700;
 	font-size: 16px;
-	background: linear-gradient(135deg, var(--ion-color-primary), var(--ion-color-secondary));
-	box-shadow: 0 6px 18px rgba(44,39,56,0.08);
+		background: linear-gradient(135deg, var(--ion-color-primary), var(--ion-color-secondary));
+	box-shadow: var(--app-elevation-1);
+	transition: transform .14s ease, box-shadow .14s ease;
+}
+
+.avatar:hover {
+	transform: translateY(-3px) scale(1.03);
 }
 
 .contact-info {
