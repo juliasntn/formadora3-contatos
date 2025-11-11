@@ -6,11 +6,11 @@
 
 :root {
 	/* Core colors - refined for a cleaner modern look */
-	--ion-color-primary: #5B4BD8; /* deep indigo */
+	--ion-color-primary: #a91313; /* deep indigo */
 	--ion-color-primary-rgb: 91,75,216;
 	--ion-color-primary-contrast: #ffffff;
-	--ion-color-primary-shade: #4a3ec0;
-	--ion-color-primary-tint: #8f83f0;
+	--ion-color-primary-shade: #f30e0e;
+	--ion-color-primary-tint: #b30f0f;
 
 	--ion-color-secondary: #06C2A5; /* fresh teal */
 	--ion-color-tertiary: #00A8FF;
@@ -21,7 +21,7 @@
 
 	--ion-color-dark: #111217;
 	--ion-color-medium: #6f7380;
-	--ion-color-light: #fbfbfe;
+	--ion-color-light: #000000;
 
 	/* Surface and background */
 	--app-surface: rgba(255,255,255,0.85);

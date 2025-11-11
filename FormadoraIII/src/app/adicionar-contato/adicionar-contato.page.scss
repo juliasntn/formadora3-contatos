@@ -1,61 +1,45 @@
 ion-card {
-  box-shadow: var(--app-elevation-1);
-  border-radius: var(--app-border-radius-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
   overflow: hidden;
 
   ion-card-header {
     background: linear-gradient(135deg, var(--ion-color-primary-tint), var(--ion-color-primary));
-    color: var(--ion-color-primary-contrast);
-    padding: 18px;
+    color: white;
+    padding: 20px;
 
     ion-card-title {
-      color: var(--ion-color-primary-contrast);
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 2px;
+      color: white;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 4px;
     }
 
     ion-card-subtitle {
-      color: rgba(255, 255, 255, 0.95);
+      color: rgba(255, 255, 255, 0.9);
       font-size: 0.95rem;
     }
   }
 
   ion-card-content {
-    padding: 18px;
-  }
-
-  .form-row {
-    margin-bottom: var(--space-sm);
-  }
-
-  .actions {
-    display: flex;
-    gap: var(--space-sm);
-    justify-content: flex-end;
-    margin-top: var(--space-sm);
+    padding: 20px;
   }
 }
-
-/* animate form card on load */
-ion-card { animation: pop .36s cubic-bezier(.22,.9,.3,1) both; }
 
 ion-item {
   --padding-start: 0;
   --inner-padding-end: 0;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   --background: transparent;
 
   ion-icon {
     margin-right: 12px;
-    color: var(--ion-color-primary-shade);
   }
 }
 
 ion-button {
-  --border-radius: var(--app-border-radius-md);
+  --border-radius: 12px;
   font-weight: 600;
-  height: 46px;
+  height: 48px;
   text-transform: none;
 }
-
